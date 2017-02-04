@@ -41,7 +41,6 @@
 			</div>
 		</div>
 	
-
 		<!-- Carousel -->
 		<div class="fl carousel-main" style="top:0;width:100%;overflow:hidden">
 			<div><img width="100%" src="Image/FirstPage/bar.png"></div>
@@ -86,7 +85,100 @@
 			<p><strong>Learning</strong></p>
 		</div>
 		
-		<div class=""></div>
+		<div class="multiple-containers">
+			<div class="right-container">
+				<div class="right-top-container center">
+					<div class="right-top-container-title">
+						<p>About ABC</p>
+					</div>
+					<div class="right-top-container-content">
+						<p>Hi my name is ... Hi my name is ... Hi my name is ... Hi my name is ... Hi my name is ... Hi my name is ... Hi my name is ... Hi my name is ... 
+						Hi my name is ... Hi my name is ... Hi my name is ... Hi my name is ... </p> 
+					</div>
+				</div>
+				<div class="right-btm-container center">
+					<div class="right-btm-container-title">
+						<p>Example of the lessons</p>
+					</div>
+					<div class="right-btm-container-content">
+						<div class="double-carousel">
+							<div><img src="Image/FirstPage/ff-2.png"></div>
+							<div><img src="Image/FirstPage/class.png"></div>
+							<div><img src="Image/FirstPage/ff-2.png"></div>
+							<div><img src="Image/FirstPage/class.png"></div>
+							<div><img src="Image/FirstPage/ff-2.png"></div>
+							<div><img src="Image/FirstPage/class.png"></div>
+						</div>
+					</div>				
+				</div>
+			</div>
+			<div class="left-container">
+				<div class="left-top-container">
+					<div class="left-top-container-title">
+						<p>Media</p>
+					</div>
+					<div class="left-container-content">
+						<div class="left-double-container-content">
+							<div class="left-mini-container">
+								<div class="left-mini-container-title">
+									<p>Interview</p>
+								</div>
+								<div class="left-mini-container-content">
+									<p>paragraph... paragraph... paragraph... paragraph...
+										paragraph... paragraph... paragraph... paragraph...</p>
+								</div>
+							</div>
+							<div class="left-mini-container">
+								<div class="left-mini-container-title">
+									<p>Interview</p>
+								</div>
+								<div class="left-mini-container-content">
+									<p>paragraph... paragraph... paragraph... paragraph...
+										paragraph... paragraph... paragraph... paragraph...</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="left-btm-container">
+					<div class="left-container-content">
+						<div class="left-double-container-content">
+							<div class="left-mini-container-left" style="width:275px;background-color:#51d4d2">
+							<div class="left-mini-container">
+								<div class="left-mini-container-title">
+									<p>Activities</p>
+								</div>
+								<div class="left-mini-container-content">
+									<div class="mini-carousel">
+										<div><img width="100%" src="Image/FirstPage/crowd.png"></div>
+										<div><img width="100%" src="Image/FirstPage/crowd.png"></div>
+										<div><img width="100%" src="Image/FirstPage/crowd.png"></div>
+									</div>
+								</div>
+							</div>
+							</div>
+							<div class="left-mini-container-right" style="width:275px;background-color:#604cc6">
+							<div class="left-mini-container">
+								<div class="left-mini-container-title">
+									<p>Awards</p>
+								</div>
+								<div class="left-mini-container-content">
+									<div class="mini-carousel">
+										<div><img width="100%" src="Image/FirstPage/cert.png"></div>
+										<div><img width="100%" src="Image/FirstPage/cert.png"></div>
+										<div><img width="100%" src="Image/FirstPage/cert.png"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="footer">
+			
+		</div>
 	</div>
 	
 	<script type="text/javascript">
@@ -97,6 +189,23 @@
 				slidesToShow: 1,
 				autoplay:true
 			});
+			
+			$(".double-carousel").slick({
+				dots: true,
+				speed: 500,
+				slidesToShow: 2,
+				slidesToScroll: 2,
+				autoplay: true,
+				arrows: false
+			});
+			
+			$(".mini-carousel").slick({
+				dots: true,
+				speed: 500,
+				slidesToShow: 1,
+				autoplay: true,
+				arrows: false
+			})
 		});
 	</script>
 </body>
