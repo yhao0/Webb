@@ -104,7 +104,10 @@ a,input,button,textarea,select {
 }
 .btn-red {
 	color:#fff;
-	background-color:#f44e51
+	background-color:#f44e51;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px
 }
 .btn-grey:hover,.btn-red:hover {
 	color:#fff;
@@ -1563,7 +1566,6 @@ a,input,button,textarea,select {
 
 .left-container {
 	width: 550px;
-	height: 500px;
 }
 
 .left-top-container {
@@ -1592,6 +1594,10 @@ a,input,button,textarea,select {
 .left-mini-container {
 	width: 200px;
 	margin: auto
+}
+
+sm-left {
+	width: 450px
 }
 
 .footer {
@@ -1636,6 +1642,54 @@ a,input,button,textarea,select {
 .footer .QRcode {
 	width: 225px;
 	padding-right:10px
+}
+
+.panel-container {
+	width: 300px;
+	margin: auto;
+	display: flex;
+	padding: 10px 0 10px
+}
+
+.panel-container .panel {
+	width: 50px;
+	margin: auto
+}
+
+.desc-container {
+	width: 500px;
+	margin:auto;
+	text-align: center;
+}	
+
+.parts {
+	display: flex	
+}
+
+.parts .for-the-picture {
+	width: 200px;
+}
+
+.parts .for-the-picture img {
+	width: 100%
+}
+
+.parts .for-the-desc {
+	width: 300px
+}
+
+.article-top {
+	margin: auto;
+	width: 350px;
+	display: flex;
+	padding-bottom: 10px;
+	padding-top: 10px
+}
+
+.article-body {
+	width: 700px;
+	margin:auto;
+	margin-bottom: 30px
 }
 
 .center {
