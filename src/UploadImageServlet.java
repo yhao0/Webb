@@ -1,6 +1,4 @@
 
-
-import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -9,7 +7,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
+ 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -17,47 +15,35 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
-
-/**
- * Servlet implementation class UpdateServlet
- */
-@WebServlet("/UpdateServlet")
+ 
+@WebServlet("/UploadImageServlet")
 @MultipartConfig(maxFileSize = 16177215)    // upload file's size up to 16MB
-public class UpdateServlet extends HttpServlet {
+public class UploadImageServlet extends HttpServlet {
 	private static final int BUFFER_SIZE = 4096;
-       
+	
+    // database connection settings
     private String dbURL = "jdbc:mysql://localhost:3306/vrclass";
     private String dbUser = "root";
     private String dbPass = "root";
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-        String table = request.getParameter("table");
-        String newFileName = request.getParameter("newFileName");
-        int rowID = Integer.parseInt(request.getParameter("id"));
-        //System.out.println(table + " " + fileName/*+ rowID*/);
-        
+     
+    protected void doPost(HttpServletRequest request,
+            HttpServletResponse response) throws ServletException, IOException {
+        // gets values of text fields
+        String fileName = request.getParameter("fileName");
         InputStream inputStream = null; // input stream of the upload file
+         
         // obtains the upload file part in this multipart request
-        Part newFilePart = request.getPart("newPhoto");
-        
-        if (newFilePart != null) {
+        Part filePart = request.getPart("photo");
+        if (filePart != null) {
             // prints out some information for debugging
-        	/*
             System.out.println(filePart.getName());
             System.out.println(filePart.getSize());
             System.out.println(filePart.getContentType());
-            */
-          
-            
+           
             // obtains input stream of the upload file
-            inputStream = newFilePart.getInputStream();
-            // writes the file to the desired path
+            inputStream = filePart.getInputStream();
         }
-        
+         
         Connection conn = null; // connection to the database
         String message = null;  // message will be sent back to client
          
@@ -67,16 +53,17 @@ public class UpdateServlet extends HttpServlet {
             conn = DriverManager.getConnection(dbURL, dbUser, dbPass);
  
             // constructs SQL statement
-            String sql = String.format("UPDATE %s SET file_name = ?, image = ? WHERE id = ?", table);
+            String sql = "INSERT INTO images (file_name, image) values (?, ?)";
             PreparedStatement statement = conn.prepareStatement(sql);
-            statement.setString(1, newFileName);
-            statement.setInt(3, rowID);
-            System.out.println(sql);
+            statement.setString(1, fileName);
+             
+            
             if (inputStream != null) {
                 // fetches input stream of the upload file for the blob column
                 statement.setBlob(2, inputStream);
             }
-            
+ 
+ 		
             // sends the statement to the database server
             int row = statement.executeUpdate();
             if (row > 0) {
@@ -100,6 +87,5 @@ public class UpdateServlet extends HttpServlet {
             // forwards to the message page
             getServletContext().getRequestDispatcher("/Message.jsp").forward(request, response);
         }
-	}
-
+    }
 }
