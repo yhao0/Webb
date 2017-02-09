@@ -205,7 +205,7 @@
 							<div class="left-mini-container-left"
 								style="width: 275px; background-color: #51d4d2">
 								<div class="left-mini-container">
-									<div class="left-mini-container-title">
+									<div class="left-mini-container-title" style="margin-top:5px">
 										<p>展会活动</p>
 									</div>
 									<div class="left-mini-container-content">
@@ -226,8 +226,8 @@
 							<div class="left-mini-container-right"
 								style="width: 275px; background-color: #604cc6">
 								<div class="left-mini-container">
-									<div class="left-mini-container-title">
-										<p>所获奖项</p>
+									<div class="left-mini-container-title" style="margin-top:5px">
+										<p style="color:#d0ced9">所获奖项</p>
 									</div>
 									<div class="left-mini-container-content">
 										<div class="mini-carousel">
