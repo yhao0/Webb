@@ -956,11 +956,12 @@ a,input,button,textarea,select {
 	text-align: left;
 	width: 300px;
 	padding: 10px 0 0 50px;
-	color: #f7cf05
+	color: #f7cf05;
+	margin-bottom: 15px
 }
 
 .right-top-container-content {
-	text-align: center;
+	text-align: left;
 	width: 400px;
 	margin: auto;
 	color: #cdcdcd
@@ -972,7 +973,7 @@ a,input,button,textarea,select {
 	width: 300px;
 	padding: 10px 0 0 50px;
 	color: #f7cf05;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 
 .right-btm-container-content {
