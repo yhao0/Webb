@@ -25,11 +25,14 @@ public class UploadImageServlet extends HttpServlet {
     private String dbURL = "jdbc:mysql://localhost:3306/vrclass";
     private String dbUser = "root";
     private String dbPass = "root";
+    private static final String sql = "INSERT INTO images (page, section, file_name, image) values (?, ?, ?, ?)";
      
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
         // gets values of text fields
         String fileName = request.getParameter("fileName");
+        String page = request.getParameter("page");
+        String section = request.getParameter("section");
         InputStream inputStream = null; // input stream of the upload file
          
         // obtains the upload file part in this multipart request
@@ -53,14 +56,15 @@ public class UploadImageServlet extends HttpServlet {
             conn = DriverManager.getConnection(dbURL, dbUser, dbPass);
  
             // constructs SQL statement
-            String sql = "INSERT INTO images (file_name, image) values (?, ?)";
             PreparedStatement statement = conn.prepareStatement(sql);
-            statement.setString(1, fileName);
+            statement.setString(1, page);
+            statement.setString(2, section);
+            statement.setString(3, fileName);
              
             
             if (inputStream != null) {
                 // fetches input stream of the upload file for the blob column
-                statement.setBlob(2, inputStream);
+                statement.setBlob(4, inputStream);
             }
  
  		

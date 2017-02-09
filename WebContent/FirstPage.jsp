@@ -53,7 +53,7 @@
 					<img src="Image/Navbar/kuqutop.png">
 				</div>
 				<ul class="fl nav-main">
-					<li><a href="/?pc=1">首页</a></li>
+					<li><a href="#">首页</a></li>
 					<li><a href="#">关于酷趣ABC</a></li>
 					<li><a href="#">真实场景英语理念</a></li>
 					<li><a href="#">课程体系</a></li>
@@ -79,42 +79,43 @@
 		<div class="full-width-container">
 			<div class="heading">
 				<p>
-					<strong>Learning</strong>
-				</p>
+					<strong>阶梯式英语语感训练</strong>
 			</div>
 		</div>
 
 		<!-- Menu -->
-		<div class="container" style="display: flex; margin: auto">
-			<div class="hover-box">
-				<img src="Image/FirstPage/first.png">
-				<div class="overlay">
-					<div class="hover-image">
-						<img src="Image/FirstPage/hover.png">
+		<div class="full-width-container">
+			<div class="container">
+				<div class="hover-box">
+					<img src="${pageContext.request.contextPath}/images/first">
+					<div class="overlay">
+						<div class="hover-image">
+							<img src="Image/FirstPage/hover.png">
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="hover-box">
-				<img src="Image/FirstPage/second.png">
-				<div class="overlay">
-					<div class="hover-image">
-						<img src="Image/FirstPage/hover.png">
+				<div class="hover-box">
+					<img src="${pageContext.request.contextPath}/images/second">
+					<div class="overlay">
+						<div class="hover-image">
+							<img src="Image/FirstPage/hover.png">
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="hover-box">
-				<img src="Image/FirstPage/third.png">
-				<div class="overlay">
-					<div class="hover-image">
-						<img src="Image/FirstPage/hover.png">
+				<div class="hover-box">
+					<img src="${pageContext.request.contextPath}/images/third">
+					<div class="overlay">
+						<div class="hover-image">
+							<img src="Image/FirstPage/hover.png">
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="hover-box">
-				<img src="Image/FirstPage/fourth.png">
-				<div class="overlay">
-					<div class="hover-image">
-						<img src="Image/FirstPage/hover.png">
+				<div class="hover-box">
+					<img src="${pageContext.request.contextPath}/images/fourth">
+					<div class="overlay">
+						<div class="hover-image">
+							<img src="Image/FirstPage/hover.png">
+						</div>
 					</div>
 				</div>
 			</div>
@@ -124,7 +125,7 @@
 		<div class="full-width-container">
 			<div class="heading" style="margin-top:20px">
 				<p>
-					<strong>Learning</strong>
+					<strong>了解酷趣ABC</strong>
 				</p>
 			</div>
 		</div>
@@ -133,7 +134,7 @@
 				<div class="right-container">
 					<div class="right-top-container center">
 						<div class="right-top-container-title">
-							<p>About ABC</p>
+							<p>关于酷趣ABC</p>
 						</div>
 						<div class="right-top-container-content">
 							<p>Hi my name is ... Hi my name is ... Hi my name is ... Hi
@@ -144,37 +145,37 @@
 					</div>
 					<div class="right-btm-container center">
 						<div class="right-btm-container-title">
-							<p>Example of the lessons</p>
+							<p>课堂略影</p>
 						</div>
 						<div class="right-btm-container-content">
 							<div class="double-carousel">
 								<div>
-									<img src="Image/FirstPage/ff-2.png">
+									<img src="${pageContext.request.contextPath}/images/ff-2">
 								</div>
 								<div>
-									<img src="Image/FirstPage/class.png">
+									<img src="${pageContext.request.contextPath}/images/class">
 								</div>
 								<div>
-									<img src="Image/FirstPage/ff-2.png">
+									<img src="${pageContext.request.contextPath}/images/ff-2">
 								</div>
 								<div>
-									<img src="Image/FirstPage/class.png">
+									<img src="${pageContext.request.contextPath}/images/class">
 								</div>
 								<div>
-									<img src="Image/FirstPage/ff-2.png">
+									<img src="${pageContext.request.contextPath}/images/ff-2">
 								</div>
 								<div>
-									<img src="Image/FirstPage/class.png">
+									<img src="${pageContext.request.contextPath}/images/class">
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="left-container" style="height: 500px">
+				<div class="left-container">
 					<div class="left-top-container">
 						<div class="left-top-container-title">
-							<p>Media</p>
+							<p>媒体报道</p>
 						</div>
 						<div class="left-container-content">
 							<div class="left-double-container-content">
@@ -199,47 +200,45 @@
 							</div>
 						</div>
 					</div>
-					<div class="left-btm-container">
-						<div class="left-container-content">
-							<div class="left-double-container-content">
-								<div class="left-mini-container-left"
-									style="width: 275px; background-color: #51d4d2">
-									<div class="left-mini-container">
-										<div class="left-mini-container-title">
-											<p>Activities</p>
-										</div>
-										<div class="left-mini-container-content">
-											<div class="mini-carousel">
-												<div>
-													<img width="100%" src="Image/FirstPage/crowd.png">
-												</div>
-												<div>
-													<img width="100%" src="Image/FirstPage/crowd.png">
-												</div>
-												<div>
-													<img width="100%" src="Image/FirstPage/crowd.png">
-												</div>
+					<div class="left-container-content">
+						<div class="left-double-container-content">
+							<div class="left-mini-container-left"
+								style="width: 275px; background-color: #51d4d2">
+								<div class="left-mini-container">
+									<div class="left-mini-container-title">
+										<p>展会活动</p>
+									</div>
+									<div class="left-mini-container-content">
+										<div class="mini-carousel">
+											<div>
+												<img width="100%" src="${pageContext.request.contextPath}/images/crowd">
+											</div>
+											<div>
+												<img width="100%" src="${pageContext.request.contextPath}/images/crowd">
+											</div>
+											<div>
+												<img width="100%" src="${pageContext.request.contextPath}/images/crowd">
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="left-mini-container-right"
-									style="width: 275px; background-color: #604cc6">
-									<div class="left-mini-container">
-										<div class="left-mini-container-title">
-											<p>Awards</p>
-										</div>
-										<div class="left-mini-container-content">
-											<div class="mini-carousel">
-												<div>
-													<img width="100%" src="Image/FirstPage/cert.png">
-												</div>
-												<div>
-													<img width="100%" src="Image/FirstPage/cert.png">
-												</div>
-												<div>
-													<img width="100%" src="Image/FirstPage/cert.png">
-												</div>
+							</div>
+							<div class="left-mini-container-right"
+								style="width: 275px; background-color: #604cc6">
+								<div class="left-mini-container">
+									<div class="left-mini-container-title">
+										<p>所获奖项</p>
+									</div>
+									<div class="left-mini-container-content">
+										<div class="mini-carousel">
+											<div>
+												<img width="100%" src="${pageContext.request.contextPath}/images/cert">
+											</div>
+											<div>
+												<img width="100%" src="${pageContext.request.contextPath}/images/cert">
+											</div>
+											<div>
+												<img width="100%" src="${pageContext.request.contextPath}/images/cert">
 											</div>
 										</div>
 									</div>
@@ -257,54 +256,54 @@
 					<div class="company-logo">
 						<!-- flex -->
 						<div class="choce-logo">
-							<img src="Image/Footer/chocenglishlogo.png">
+							<img src="${pageContext.request.contextPath}/images/chocenglishlogo">
 						</div>
 						<div class="kuqu-logo" style="margin: auto">
-							<img src="Image/Footer/kuqubtm.png">
+							<img src="${pageContext.request.contextPath}/images/kuqubtm">
 						</div>
 					</div>
 					<div class="desc">
-						<p>BeiJing Chocenglish</p>
-						<p>Location:</p>
-						<p>Trademark</p>
+						<p>北京巧克互动国际教育有限公司</p>
+						<p>地址:北京市海淀区中关村大街18号中关村互联网教育创新中心1017</p>
+						<p>&copy2016 KUQUABC 京ICP证030173号</p>
 					</div>
 				</div>
 				<div class="cooperation">
 					<!-- 100 -->
-					<p>Cooperate</p>
-					<img src="Image/Footer/handshake.png">
-					<p>Only one</p>
-					<p>Expand</p>
-					<p>[Understand more]</p>
+					<p>授权合作</p>
+					<img src="${pageContext.request.contextPath}/images/handshake">
+					<p>国内唯一真实场景英语</p>
+					<p>共拓少儿英语蓝海</p>
+					<p>[了解详情]</p>
 				</div>
 				<div class="recruitment" style="padding-right: 15px">
 					<!-- 50 -->
-					<p>Hiring</p>
-					<p>Quality</p>
-					<p>Assistant</p>
+					<p>人才招聘</p>
+					<p>优质外教</p>
+					<p>教学助理</p>
 				</div>
 				<div class="social-media">
 					<!-- 100 -->
-					<p>Follow us</p>
+					<p>关注我们</p>
 					<div class="social-links">
 						<!-- flex -->
 						<div class="weibo">
-							<img src="Image/Footer/weibo.png">
+							<img src="${pageContext.request.contextPath}/images/weibo">
 						</div>
 						<div class="weixin">
-							<img src="Image/Footer/wechat.png">
+							<img src="${pageContext.request.contextPath}/images/wechat">
 						</div>
 					</div>
 				</div>
 				<div class="hotline">
 					<!-- 225 -->
-					<p>Hotline</p>
-					<p>010-5145 8320</p>
-					<p>Every monday to sunday 0900-1900</p>
+					<p>咨询热线</p>
+					<p style="color:yellow"><strong>010-5145 8320</strong></p>
+					<p>周一至周日09:00-19:00</p>
 				</div>
 				<div class="QRcode">
 					<!-- 225 -->
-					<img src="Image/Footer/QR.png">
+					<img src="${pageContext.request.contextPath}/images/QR">
 				</div>
 			</div>
 		</div>
@@ -313,7 +312,7 @@
 		$(document).ready(function() {
 			$(".carousel-main").slick({
 				dots : true,
-				speed : 3000,
+				speed : 1000,
 				slidesToShow : 1,
 				autoplay : true
 			});

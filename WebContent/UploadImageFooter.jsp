@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>File Upload to Database Demo</title>
+<title>File Upload to Database</title>
 </head>
 <body>
     <div style="margin:auto">
@@ -22,7 +22,7 @@
                 <tr>
                     <td colspan="2">
                     	<input type="hidden" value="FirstPage" name="page">
-                    	<input type="hidden" value="carousel" name="section">
+                    	<input type="hidden" value="footer" name="section">
                         <input type="submit" value="Save">
                     </td>
                 </tr>

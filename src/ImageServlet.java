@@ -31,14 +31,16 @@ public class ImageServlet extends HttpServlet {
     private String dbPass = "root";
     // content=blob, name=varchar(255) UNIQUE.
     private static final String SQL_FIND = "SELECT image FROM images WHERE file_name = ?";
-
-   // @Resource(name="jdbc/vrclass") // For Tomcat, define as <Resource> in context.xml and declare as <resource-ref> in web.xml.
+    // @Resource(name="jdbc/vrclass") // For Tomcat, define as <Resource> in context.xml and declare as <resource-ref> in web.xml.
   
-
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String imageName = request.getPathInfo().substring(1); // Returns "foo.png".
-        Connection conn = null;
+    	//String table = request.getParameter("table");
+    	//String imageName = request.getPathInfo(); 
+    	String imageName = request.getPathInfo().substring(1); // Returns "foo.png".
+        System.out.println("imageName " + imageName);
+    	Connection conn = null;
         try {
         	DriverManager.registerDriver(new com.mysql.jdbc.Driver());
         	conn = DriverManager.getConnection(dbURL, dbUser, dbPass); 

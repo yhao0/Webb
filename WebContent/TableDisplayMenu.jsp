@@ -14,7 +14,7 @@
      user="root"  password="root"/>
  
 <sql:query dataSource="${snapshot}" var="result">
-SELECT * FROM images WHERE section="carousel" AND page="FirstPage";
+SELECT * FROM images WHERE section="menu" AND page="FirstPage";
 </sql:query>
  
 <table border="1" width="100%">
@@ -24,6 +24,7 @@ SELECT * FROM images WHERE section="carousel" AND page="FirstPage";
    <th>Image</th>
    <th>Options</th>
 </tr>
+
 <c:forEach var="row" items="${result.rows}">
 <tr>
    <td><c:out value="${row.id}"/></td>
@@ -31,12 +32,12 @@ SELECT * FROM images WHERE section="carousel" AND page="FirstPage";
    <td><img src="${pageContext.request.contextPath}/images/${row.file_name}"></td>
    <td>
    		<form action="DeleteServlet" method="post">
-   			<input type="hidden" value="images" name="table"/>
+   			<input type="hidden" value="menu" name="table"/>
    			<input type="hidden" value="${row.id}" name="picID"/>
    			<input type="submit" value="Remove" name="remove"/>
    		</form>
    		<form action="Update.jsp" method="post">
-   			<input type="hidden" value="images" name="table"/>
+   			<input type="hidden" value="menu" name="table"/>
    			<input type="hidden" value="${row.id}" name="picID"/>
    			<input type="submit" value="Update" name="update"/>
    		</form>

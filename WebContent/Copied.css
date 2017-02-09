@@ -145,6 +145,7 @@ a,input,button,textarea,select {
 	border-radius:5px
 }
 
+
 #onlineservice {
 	position:fixed;
 	right:10px;
@@ -425,93 +426,6 @@ a,input,button,textarea,select {
 	margin-top:10px;
 	font-size:14px;
 	color:#999
-}
-
-#footer {
-	line-height:24px;
-	text-align:center;
-	color:#fff
-}
-#footer ul,#footer dl {
-	margin:0;
-	padding:0
-}
-#footer li {
-	margin:0;
-	list-style:none;
-	color:#999
-}
-#footer .info-foot {
-	text-align:left;
-	background-color:#444;
-	padding:20px 0
-}
-#footer .info-foot dl {
-	height:200px;
-	margin:0 50px 0 0;
-	border-right:1px solid #555;
-	color:#eee
-}
-#footer .info-foot dt {
-	font-size:16px;
-	font-weight:400;
-	margin-bottom:10px
-}
-#footer .info-foot dt a {
-	color:#eee
-}
-#footer .info-foot dd {
-	line-height:24px
-}
-#footer .info-foot .phone {
-	width:300px
-}
-#footer .info-foot .phone h3,#footer .info-foot .phone h4,#footer .info-foot .phone p {
-	margin:0
-}
-#footer .info-foot .phone h3 {
-	font-size:32px;
-	margin-bottom:10px
-}
-#footer .info-foot .phone p,#footer .info-foot .phone h4 {
-	color:#999
-}
-#footer .info-foot .phone small {
-	font-size:80%;
-	color:#666 ；
-}
-#footer .info-foot .phone h4 {
-	font-size:24px
-}
-#footer .info-foot .news {
-	width:420px
-}
-#footer .info-foot .news li {
-	overflow:hidden;
-	text-overflow:ellipsis;
-	white-space:nowrap;
-	max-width:370px
-}
-#footer .info-foot .subnav {
-	width:220px
-}
-#footer .info-foot .weixin {
-	margin-right:0;
-	border-right:0
-}
-#footer .info-foot .weixin dd {
-	width:100px;
-	padding:8px;
-	background-color:#fff
-}
-#footer .info-foot .weixin img {
-	width:100%
-}
-#footer .info-foot a {
-	color:#999
-}
-#footer .info-foot a:hover {
-	color:#eee
 }
 
 .newpage {
@@ -883,49 +797,6 @@ a,input,button,textarea,select {
 	color:#535558
 }
 
-.newpage #footer .info-foot {
-	background-color:#fff;
-	padding:50px 0 20px 0
-}
-.newpage #footer .info-foot dl {
-	border:none
-}
-.newpage #footer .info-foot .logo {
-	width:140px;
-	padding:0 15px
-}
-.newpage #footer .info-foot .logo img {
-	width:100%
-}
-.newpage #footer .info-foot .news {
-	width:285px
-}
-.newpage #footer .info-foot .phone {
-	width:165px
-}
-.newpage #footer .info-foot .phone h3 {
-	font-size:22px;
-	color:#666
-}
-.newpage #footer .info-foot .subnav {
-	width:105px
-}
-.newpage #footer .info-foot .weixin dd {
-	width:100px;
-	padding:6px;
-	background-color:#fff;
-	border:1px solid #ddd
-}
-.newpage #footer .info-foot dt {
-	color:#333
-}
-.newpage #footer .info-foot dt a {
-	color:#333
-}
-.newpage #footer .info-foot a:hover {
-	color:#333;
-	text-decoration:underline
-}
 @media screen and (max-width: 1520px) {
 	.newpage .header .topbar .nav {
 		position:absolute;
@@ -999,13 +870,20 @@ a,input,button,textarea,select {
 }
 
 .container {
-	width: 1000px
+	width: 1000px;
+	text-align:center
 }
 
 .hover-box {
-	max-width: 250px;
+	max-width: 220px;
 	/*padding-left: 50px;*/
 	position: relative;
+	display: inline-block;
+	margin:auto
+}
+
+.hover-box img {
+	width: 100%
 }
 
 .image {
@@ -1018,14 +896,13 @@ a,input,button,textarea,select {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 20%;
+  left: 0;
   right: 0;
-  height: 80%;
-  width: 50%;
+  height: 100%;
+  width: 100%;
   opacity: 0;
   transition: .5s ease;
   background-color: transparent;
-  /*padding-right: 77px*/
 }
 
 .hover-box:hover .overlay {
@@ -1034,10 +911,11 @@ a,input,button,textarea,select {
 
 .hover-image {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  height:100%
+}
+
+.hover-image img {
+	height:100%
 }
 
 .heading {
@@ -1097,6 +975,11 @@ a,input,button,textarea,select {
 	margin-bottom: 10px;
 }
 
+.right-btm-container-content {
+	margin:auto;
+	width: 480px
+}
+
 .left-container {
 	width: 550px;
 }
@@ -1122,6 +1005,7 @@ a,input,button,textarea,select {
 	width: 550px;
 	margin: auto;
 	display: flex;
+	height:192px
 }
 
 .left-mini-container {
@@ -1138,7 +1022,7 @@ sm-left {
 	display: flex;
 	margin:auto;
 	padding: 30px;
-	background-color: #2c2c2
+	background-color: #2c2c2;
 }
 .footer .company-info {
 	width:300px;
@@ -1151,6 +1035,7 @@ sm-left {
 
 .footer .cooperation {
 	width: 150px;	
+	text-align:center
 }
 
 .footer .recuitment {
@@ -1160,7 +1045,8 @@ sm-left {
 
 .footer .social-media {
 	width: 100px;
-	padding-right:10px
+	padding-right:10px;
+	text-align: center
 }
 
 .footer .social-media .social-links {
@@ -1169,7 +1055,8 @@ sm-left {
 
 .footer .hotline {
 	width: 190px;
-	padding-right:10px
+	padding-right:10px;
+	text-align: center
 }
 
 .footer .QRcode {

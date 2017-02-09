@@ -29,13 +29,13 @@ public class UpdateServlet extends HttpServlet {
     private String dbURL = "jdbc:mysql://localhost:3306/vrclass";
     private String dbUser = "root";
     private String dbPass = "root";
+    private static final String sql = "UPDATE images SET file_name = ?, image = ? WHERE id = ?";
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-        String table = request.getParameter("table");
         String newFileName = request.getParameter("newFileName");
         int rowID = Integer.parseInt(request.getParameter("id"));
         //System.out.println(table + " " + fileName/*+ rowID*/);
@@ -67,7 +67,6 @@ public class UpdateServlet extends HttpServlet {
             conn = DriverManager.getConnection(dbURL, dbUser, dbPass);
  
             // constructs SQL statement
-            String sql = String.format("UPDATE %s SET file_name = ?, image = ? WHERE id = ?", table);
             PreparedStatement statement = conn.prepareStatement(sql);
             statement.setString(1, newFileName);
             statement.setInt(3, rowID);
