@@ -1,63 +1,87 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
+<%@ page import="java.io.*,java.util.*,java.sql.*"%>
+<%@ page import="javax.servlet.http.*,javax.servlet.*"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- CSS -->
-	<link href="Slick/slick/slick.css" rel="stylesheet" type="text/css">
-	<link href="Slick/slick/slick-theme.css" rel="stylesheet" type="text/css">
-	<link href="FontAwesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href="Bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-	<link href="Copied.css" rel="stylesheet" type="text/css">
-	<!-- scripts -->
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<script src="OwlCarousel/docs/assets/vendors/jquery.min.js"></script>
-	<script src="Bootstrap/dist/js/bootstrap.min.js"></script>
-	<script src="Slick/slick/slick.min.js"></script>
-	
-	<title>VRClass</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- CSS -->
+<link href="Slick/slick/slick.css" rel="stylesheet" type="text/css">
+<link href="Slick/slick/slick-theme.css" rel="stylesheet"
+	type="text/css">
+<link href="FontAwesome/css/font-awesome.min.css" rel="stylesheet"
+	type="text/css">
+<link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet"
+	type="text/css">
+<link href="Copied.css" rel="stylesheet" type="text/css">
+<!-- scripts -->
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="OwlCarousel/docs/assets/vendors/jquery.min.js"></script>
+<script src="Bootstrap/js/bootstrap.min.js"></script>
+<script src="Slick/slick/slick.min.js"></script>
+
+<title>VRClass</title>
 </head>
 <body>
+
+	<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://localhost/vrclass" user="root" password="root" />
+
 	<!-- Enquery -->
-	<div id="onlineservice">
-		<div>
-			<i class="icon icon-chat">在线咨询</i>
+	<a href="#">
+		<div id="onlineservice">
+			<div class="query">
+				<i class="fa fa-question-circle" aria-hidden="true"></i>
+				<p style="color: #f6f6f6">在线咨询</p>
+			</div>
 		</div>
-	</div>
-	
+	</a>
+
 	<!-- Navbar -->
 	<div class="newpage" id="page">
 		<div id="header">
-			<div class="navbar clearfix">
+			<div class="nav-main">
 				<div class="fl logo">
 					<img src="Image/Navbar/kuqutop.png">
 				</div>
 				<ul class="fl nav-main">
-					<li class="active"><a href="/?pc=1">首页</a></li>
-					<li><a href="/teacher.html">团队</a></li>
-					<li><a href="/lessonintor.html">课程</a></li>
-					<li><a href="/step.html">上课</a></li>
-					<li><a href="/customer/stars">口碑</a></li>
+					<li><a href="/?pc=1">首页</a></li>
+					<li><a href="#">关于酷趣ABC</a></li>
+					<li><a href="#">真实场景英语理念</a></li>
+					<li><a href="#">课程体系</a></li>
+					<li><a href="#">学习中心</a></li>
+					<li><a href="#">授权合作</a></li>
 				</ul>
 			</div>
 		</div>
 
 		<!-- Carousel -->
-		<div class="fl carousel-main" style="top: 0; width: 100%; overflow: hidden">
+		<div class="fl carousel-main"
+			style="top: 0; width: 100%; overflow: hidden">
 			<div>
-				<img width="100%" src="Image/FirstPage/bar.png">
+				<img width="100%"
+					src="${pageContext.request.contextPath}/images/HAHAJ">
 			</div>
 			<div>
-				<img width="100%" src="Image/FirstPage/bar.png">
+				<img width="100%" src="${pageContext.request.contextPath}/images/yo">
 			</div>
 		</div>
 
 		<!-- Heading -->
-		<div class="heading">
-			<p>
-				<strong>Learning</strong>
-			</p>
+		<div class="full-width-container">
+			<div class="heading">
+				<p>
+					<strong>Learning</strong>
+				</p>
+			</div>
 		</div>
 
 		<!-- Menu -->
@@ -97,10 +121,12 @@
 		</div>
 
 		<!-- Heading -->
-		<div class="heading">
-			<p>
-				<strong>Learning</strong>
-			</p>
+		<div class="full-width-container">
+			<div class="heading" style="margin-top:20px">
+				<p>
+					<strong>Learning</strong>
+				</p>
+			</div>
 		</div>
 		<div class="full-width-container" style="background-color: #f7cf05">
 			<div class="multiple-containers">
@@ -145,7 +171,7 @@
 					</div>
 				</div>
 
-				<div class="left-container" style="height:500px">
+				<div class="left-container" style="height: 500px">
 					<div class="left-top-container">
 						<div class="left-top-container-title">
 							<p>Media</p>
@@ -284,29 +310,29 @@
 		</div>
 	</div>
 	<script type="text/javascript">
-		$(document).ready(function(){
+		$(document).ready(function() {
 			$(".carousel-main").slick({
-				dots: true,
-				speed: 3000,
-				slidesToShow: 1,
-				autoplay:true
+				dots : true,
+				speed : 3000,
+				slidesToShow : 1,
+				autoplay : true
 			});
-			
+
 			$(".double-carousel").slick({
-				dots: true,
-				speed: 500,
-				slidesToShow: 2,
-				slidesToScroll: 2,
-				autoplay: true,
-				arrows: false
+				dots : true,
+				speed : 500,
+				slidesToShow : 2,
+				slidesToScroll : 2,
+				autoplay : true,
+				arrows : false
 			});
-			
+
 			$(".mini-carousel").slick({
-				dots: true,
-				speed: 500,
-				slidesToShow: 1,
-				autoplay: true,
-				arrows: false
+				dots : true,
+				speed : 500,
+				slidesToShow : 1,
+				autoplay : true,
+				arrows : false
 			})
 		});
 	</script>
