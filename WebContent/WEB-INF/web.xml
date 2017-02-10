@@ -28,7 +28,6 @@
     <servlet-name>DeleteServlet</servlet-name>
     <url-pattern>/DeleteServlet</url-pattern>
   </servlet-mapping>
-  
   <display-name>servletImage</display-name>
   <welcome-file-list>
     <welcome-file>TableDisplay.jsp</welcome-file>
@@ -42,5 +41,16 @@
   <servlet-mapping>
     <servlet-name>ImageServlet</servlet-name>
     <url-pattern>/images/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>FirstPage</display-name>
+    <servlet-name>FirstPage</servlet-name>
+    <servlet-class>FirstPage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FirstPage</servlet-name>
+    <url-pattern>/FirstPage</url-pattern>
   </servlet-mapping>
 </web-app>

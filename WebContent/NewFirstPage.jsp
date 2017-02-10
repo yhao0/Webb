@@ -56,17 +56,20 @@
 				</ul>
 			</div>
 		</div>
-
+	
+		<!-- CHANGE THE WEB.XML TO IMAGES/PAGENUMBER, THIS WAY 1 PAGE HAS 1 DB TO ACCESS, DB WONT BE CONFUSED, NAMES MUST CHANGE TO UNIQUE -->
+		<!-- CHANGE THE WEB.XML TO IMAGES/PAGENUMBER, THIS WAY 1 PAGE HAS 1 DB TO ACCESS, DB WONT BE CONFUSED, NAMES MUST CHANGE TO UNIQUE -->
+		<!-- CHANGE THE WEB.XML TO IMAGES/PAGENUMBER, THIS WAY 1 PAGE HAS 1 DB TO ACCESS, DB WONT BE CONFUSED, NAMES MUST CHANGE TO UNIQUE -->
+		<!-- CHANGE THE WEB.XML TO IMAGES/PAGENUMBER, THIS WAY 1 PAGE HAS 1 DB TO ACCESS, DB WONT BE CONFUSED, NAMES MUST CHANGE TO UNIQUE -->
+		<!-- CHANGE THE WEB.XML TO IMAGES/PAGENUMBER, THIS WAY 1 PAGE HAS 1 DB TO ACCESS, DB WONT BE CONFUSED, NAMES MUST CHANGE TO UNIQUE -->
+		<!-- CHANGE THE WEB.XML TO IMAGES/PAGENUMBER, THIS WAY 1 PAGE HAS 1 DB TO ACCESS, DB WONT BE CONFUSED, NAMES MUST CHANGE TO UNIQUE -->
+		
 		<!-- Carousel -->
 		<div class="fl carousel-main" style="top: 0; width: 100%; overflow: hidden">
-			<div>
-				<img width="100%"
-					src="${pageContext.request.contextPath}/images/HAHAJ">
-			</div>
-			<div>
-				<img width="100%" src="${pageContext.request.contextPath}/images/yo">
-			</div>
+			<%@ include file="carousel.jsp"%>
 		</div>
+		
+		
 
 		<!-- Heading -->
 		<div class="full-width-container">
@@ -79,40 +82,7 @@
 
 		<!-- Menu -->
 		<div class="full-width-container">
-			<div class="container">
-				<div class="hover-box">
-					<img src="${pageContext.request.contextPath}/images/first">
-					<div class="overlay">
-						<div class="hover-image">
-							<img src="Image/FirstPage/hover.png">
-						</div>
-					</div>
-				</div>
-				<div class="hover-box">
-					<img src="${pageContext.request.contextPath}/images/second">
-					<div class="overlay">
-						<div class="hover-image">
-							<img src="Image/FirstPage/hover.png">
-						</div>
-					</div>
-				</div>
-				<div class="hover-box">
-					<img src="${pageContext.request.contextPath}/images/third">
-					<div class="overlay">
-						<div class="hover-image">
-							<img src="Image/FirstPage/hover.png">
-						</div>
-					</div>
-				</div>
-				<div class="hover-box">
-					<img src="${pageContext.request.contextPath}/images/fourth">
-					<div class="overlay">
-						<div class="hover-image">
-							<img src="Image/FirstPage/hover.png">
-						</div>
-					</div>
-				</div>
-			</div>
+			<%@ include file="menu.jsp"%>
 		</div>
 
 		<!-- Heading -->
