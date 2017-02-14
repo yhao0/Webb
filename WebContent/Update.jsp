@@ -11,11 +11,6 @@
         <h1>File Upload to Database Demo</h1>
         <form method="post" action="UpdateServlet" enctype="multipart/form-data">
             <table border="0">
-				<% 	
-					//String id = request.getParameter("picID");
-					//String path = request.getParameter("path");
-				 	//String table = request.getParameter("table");
-				 %>
                 <tr>
                     <td>Portrait Photo: </td>
                     <td>

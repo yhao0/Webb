@@ -28,7 +28,7 @@ SELECT * FROM images WHERE section="carousel" AND page="FirstPage";
 <tr>
    <td><c:out value="${row.id}"/></td>
    <td><c:out value="${row.file_name}"/></td>
-   <td><img src="${pageContext.request.contextPath}/images/${row.file_name}"></td>
+   <td><img src="${pageContext.request.contextPath}/images/HomePage/${row.file_name}"></td>
    <td>
    		<form action="DeleteServlet" method="post">
    			<input type="hidden" value="images" name="table"/>

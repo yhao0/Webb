@@ -29,7 +29,7 @@ SELECT * FROM images WHERE section="footer" AND page="FirstPage";
 <tr>
    <td><c:out value="${row.id}"/></td>
    <td><c:out value="${row.file_name}"/></td>
-   <td><img src="${pageContext.request.contextPath}/images/${row.file_name}"></td>
+   <td><img src="${pageContext.request.contextPath}/images//HomePage/${row.file_name}"></td>
    <td>
    		<form action="DeleteServlet" method="post">
    			<input type="hidden" value="menu" name="table"/>

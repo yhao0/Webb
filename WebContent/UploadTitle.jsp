@@ -8,21 +8,20 @@
 </head>
 <body>
     <div style="margin:auto">
-        <h1>File Upload to Database Demo</h1>
-        <form method="post" action="UploadImageServlet" enctype="multipart/form-data">
+        <h1>Title Upload</h1>
+        <form method="post" action="UploadTextServlet" enctype="multipart/form-data">
             <table border="0">
                 <tr>
-                    <td>Image: </td>
-                    <td><input type="file" name="photo" size="50"/></td>
+                	<td>Text: </td>
+                	<td><input type="text" name="passage" size="50" required/></td>
                 </tr>
                 <tr>
-                	<td>Name of Photo: </td>
-                	<td><input type="text" name="fileName" size="50" required/></td>
+                	<td>Section: </td>
+                	<td><input type="text" name="section" size="50" required></td>
                 </tr>
                 <tr>
                     <td colspan="2">
-                    	<input type="hidden" value="${param.page}" name="page">
-                    	<input type="hidden" value="carousel" name="section">
+                    	<input type="hidden" value="FirstPage" name="page">
                         <input type="submit" value="Save">
                     </td>
                 </tr>

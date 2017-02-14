@@ -40,9 +40,8 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>ImageServlet</servlet-name>
-    <url-pattern>/images/*</url-pattern>
+    <url-pattern>/images/HomePage/*</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <description></description>
     <display-name>FirstPage</display-name>

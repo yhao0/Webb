@@ -14,7 +14,7 @@
 			<div class="container">
 				<c:forEach var="row" items="${result.rows}">
 				<div class="hover-box">
-					<img src="${pageContext.request.contextPath}/images/${row.file_name}">
+					<img src="${pageContext.request.contextPath}/images/HomePage/${row.file_name}">
 					<div class="overlay">
 						<div class="hover-image">
 							<img src="Image/FirstPage/hover.png">

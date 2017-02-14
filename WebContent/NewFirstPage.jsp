@@ -4,7 +4,6 @@
 <%@ page import="javax.servlet.http.*,javax.servlet.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,9 +25,6 @@
 <title>VRClass</title>
 </head>
 <body>
-	<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
-		url="jdbc:mysql://localhost/vrclass" user="root" password="root" />
-
 	<!-- Enquery -->
 	<a href="#">
 		<div id="onlineservice">
@@ -57,40 +53,33 @@
 			</div>
 		</div>
 	
-		<!-- CHANGE THE WEB.XML TO IMAGES/PAGENUMBER, THIS WAY 1 PAGE HAS 1 DB TO ACCESS, DB WONT BE CONFUSED, NAMES MUST CHANGE TO UNIQUE -->
-		<!-- CHANGE THE WEB.XML TO IMAGES/PAGENUMBER, THIS WAY 1 PAGE HAS 1 DB TO ACCESS, DB WONT BE CONFUSED, NAMES MUST CHANGE TO UNIQUE -->
-		<!-- CHANGE THE WEB.XML TO IMAGES/PAGENUMBER, THIS WAY 1 PAGE HAS 1 DB TO ACCESS, DB WONT BE CONFUSED, NAMES MUST CHANGE TO UNIQUE -->
-		<!-- CHANGE THE WEB.XML TO IMAGES/PAGENUMBER, THIS WAY 1 PAGE HAS 1 DB TO ACCESS, DB WONT BE CONFUSED, NAMES MUST CHANGE TO UNIQUE -->
-		<!-- CHANGE THE WEB.XML TO IMAGES/PAGENUMBER, THIS WAY 1 PAGE HAS 1 DB TO ACCESS, DB WONT BE CONFUSED, NAMES MUST CHANGE TO UNIQUE -->
-		<!-- CHANGE THE WEB.XML TO IMAGES/PAGENUMBER, THIS WAY 1 PAGE HAS 1 DB TO ACCESS, DB WONT BE CONFUSED, NAMES MUST CHANGE TO UNIQUE -->
-		
 		<!-- Carousel -->
 		<div class="fl carousel-main" style="top: 0; width: 100%; overflow: hidden">
-			<%@ include file="carousel.jsp"%>
+			<%@ include file="Carousel.jsp"%>
 		</div>
-		
-		
 
 		<!-- Heading -->
 		<div class="full-width-container">
 			<div class="heading">
-				<p>
-					<strong>阶梯式英语语感训练</strong>
-				</p>
+				<jsp:include page="Text.jsp">
+        			<jsp:param name="myvar" value="menu"/>
+        			<jsp:param name="mypage" value="FirstPage"/>
+    			</jsp:include>
 			</div>
 		</div>
-
+		
 		<!-- Menu -->
 		<div class="full-width-container">
-			<%@ include file="menu.jsp"%>
+			<%@ include file="Menu.jsp"%>
 		</div>
 
 		<!-- Heading -->
 		<div class="full-width-container">
 			<div class="heading" style="margin-top:20px">
-				<p>
-					<strong>了解酷趣ABC</strong>
-				</p>
+				<jsp:include page="Text.jsp">
+        			<jsp:param name="myvar" value="second-half"/>
+        			<jsp:param name="mypage" value="FirstPage"/>
+    			</jsp:include>
 			</div>
 		</div>
 		<div class="full-width-container" style="background-color: #f7cf05">
@@ -98,7 +87,10 @@
 				<div class="right-container">
 					<div class="right-top-container center">
 						<div class="right-top-container-title">
-							<p>关于酷趣ABC</p>
+							<jsp:include page="Text.jsp">
+        						<jsp:param name="myvar" value="left-top"/>
+        						<jsp:param name="mypage" value="FirstPage"/>
+    						</jsp:include>
 						</div>
 						<div class="right-top-container-content">
 							<p>Hi my name is ... Hi my name is ... Hi my name is ... Hi
@@ -109,27 +101,30 @@
 					</div>
 					<div class="right-btm-container center">
 						<div class="right-btm-container-title">
-							<p>课堂略影</p>
+							<jsp:include page="Text.jsp">
+        						<jsp:param name="myvar" value="left-btm"/>
+        						<jsp:param name="mypage" value="FirstPage"/>
+    						</jsp:include>
 						</div>
 						<div class="right-btm-container-content">
 							<div class="double-carousel">
 								<div>
-									<img src="${pageContext.request.contextPath}/images/ff-2">
+									<img src="${pageContext.request.contextPath}/images/HomePage/ff-2">
 								</div>
 								<div>
-									<img src="${pageContext.request.contextPath}/images/class">
+									<img src="${pageContext.request.contextPath}/images/HomePage/class">
 								</div>
 								<div>
-									<img src="${pageContext.request.contextPath}/images/ff-2">
+									<img src="${pageContext.request.contextPath}/images/HomePage/ff-2">
 								</div>
 								<div>
-									<img src="${pageContext.request.contextPath}/images/class">
+									<img src="${pageContext.request.contextPath}/images/HomePage/class">
 								</div>
 								<div>
-									<img src="${pageContext.request.contextPath}/images/ff-2">
+									<img src="${pageContext.request.contextPath}/images/HomePage/ff-2">
 								</div>
 								<div>
-									<img src="${pageContext.request.contextPath}/images/class">
+									<img src="${pageContext.request.contextPath}/images/HomePage/class">
 								</div>
 							</div>
 						</div>
@@ -139,28 +134,17 @@
 				<div class="left-container">
 					<div class="left-top-container">
 						<div class="left-top-container-title">
-							<p>媒体报道</p>
+							<jsp:include page="Text.jsp">
+        						<jsp:param name="myvar" value="right-top"/>
+        						<jsp:param name="mypage" value="FirstPage"/>
+    						</jsp:include>
 						</div>
 						<div class="left-container-content">
 							<div class="left-double-container-content">
-								<div class="left-mini-container">
-									<div class="left-mini-container-title">
-										<p>Interview</p>
-									</div>
-									<div class="left-mini-container-content">
-										<p>paragraph... paragraph... paragraph... paragraph...
-											paragraph... paragraph... paragraph... paragraph...</p>
-									</div>
-								</div>
-								<div class="left-mini-container">
-									<div class="left-mini-container-title">
-										<p>Interview</p>
-									</div>
-									<div class="left-mini-container-content">
-										<p>paragraph... paragraph... paragraph... paragraph...
-											paragraph... paragraph... paragraph... paragraph...</p>
-									</div>
-								</div>
+								<jsp:include page="Preview.jsp">
+        							<jsp:param name="myvar" value="true"/>
+        							<jsp:param name="mypage" value="FirstPage"/>
+    							</jsp:include>
 							</div>
 						</div>
 					</div>
@@ -170,18 +154,21 @@
 								style="width: 275px; background-color: #51d4d2">
 								<div class="left-mini-container">
 									<div class="left-mini-container-title" style="margin-top:5px">
-										<p>展会活动</p>
+										<jsp:include page="Text.jsp">
+        									<jsp:param name="myvar" value="left-right-btm"/>
+        									<jsp:param name="mypage" value="FirstPage"/>
+    									</jsp:include>
 									</div>
 									<div class="left-mini-container-content">
 										<div class="mini-carousel">
 											<div>
-												<img width="100%" src="${pageContext.request.contextPath}/images/crowd">
+												<img width="100%" src="${pageContext.request.contextPath}/images/HomePage/crowd">
 											</div>
 											<div>
-												<img width="100%" src="${pageContext.request.contextPath}/images/crowd">
+												<img width="100%" src="${pageContext.request.contextPath}/images/HomePage/crowd">
 											</div>
 											<div>
-												<img width="100%" src="${pageContext.request.contextPath}/images/crowd">
+												<img width="100%" src="${pageContext.request.contextPath}/images/HomePage/crowd">
 											</div>
 										</div>
 									</div>
@@ -190,19 +177,22 @@
 							<div class="left-mini-container-right"
 								style="width: 275px; background-color: #604cc6">
 								<div class="left-mini-container">
-									<div class="left-mini-container-title" style="margin-top:5px">
-										<p style="color:#d0ced9">所获奖项</p>
+									<div class="left-mini-container-title" style="margin-top:5px;color:#d0ced9">
+										<jsp:include page="Text.jsp">
+        									<jsp:param name="myvar" value="right-right-btm"/>
+        									<jsp:param name="mypage" value="FirstPage"/>
+    									</jsp:include>
 									</div>
 									<div class="left-mini-container-content">
 										<div class="mini-carousel">
 											<div>
-												<img width="100%" src="${pageContext.request.contextPath}/images/cert">
+												<img width="100%" src="${pageContext.request.contextPath}/images/HomePage/cert">
 											</div>
 											<div>
-												<img width="100%" src="${pageContext.request.contextPath}/images/cert">
+												<img width="100%" src="${pageContext.request.contextPath}/images/HomePage/cert">
 											</div>
 											<div>
-												<img width="100%" src="${pageContext.request.contextPath}/images/cert">
+												<img width="100%" src="${pageContext.request.contextPath}/images/HomePage/cert">
 											</div>
 										</div>
 									</div>
@@ -220,10 +210,10 @@
 					<div class="company-logo">
 						<!-- flex -->
 						<div class="choce-logo">
-							<img src="${pageContext.request.contextPath}/images/chocenglishlogo">
+							<img src="${pageContext.request.contextPath}/images/HomePage/chocenglishlogo">
 						</div>
 						<div class="kuqu-logo" style="margin: auto">
-							<img src="${pageContext.request.contextPath}/images/kuqubtm">
+							<img src="${pageContext.request.contextPath}/images/HomePage/kuqubtm">
 						</div>
 					</div>
 					<div class="desc">
@@ -235,7 +225,7 @@
 				<div class="cooperation">
 					<!-- 100 -->
 					<p>授权合作</p>
-					<img src="${pageContext.request.contextPath}/images/handshake">
+					<img src="${pageContext.request.contextPath}/images/HomePage/handshake">
 					<p>国内唯一真实场景英语</p>
 					<p>共拓少儿英语蓝海</p>
 					<p>[了解详情]</p>
@@ -252,10 +242,10 @@
 					<div class="social-links">
 						<!-- flex -->
 						<div class="weibo">
-							<img src="${pageContext.request.contextPath}/images/weibo">
+							<img src="${pageContext.request.contextPath}/images/HomePage/weibo">
 						</div>
 						<div class="weixin">
-							<img src="${pageContext.request.contextPath}/images/wechat">
+							<img src="${pageContext.request.contextPath}/images/HomePage/wechat">
 						</div>
 					</div>
 				</div>
@@ -267,7 +257,7 @@
 				</div>
 				<div class="QRcode">
 					<!-- 225 -->
-					<img src="${pageContext.request.contextPath}/images/QR">
+					<img src="${pageContext.request.contextPath}/images/HomePage/QR">
 				</div>
 			</div>
 		</div>

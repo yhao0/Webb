@@ -23,7 +23,7 @@ import javax.sql.DataSource;
 /**
  * Servlet implementation class ImageServlet
  */
-@WebServlet("/images/*")
+@WebServlet("/images/HomePage/*")
 public class ImageServlet extends HttpServlet {
     // database connection settings
     private String dbURL = "jdbc:mysql://localhost:3306/vrclass";
@@ -59,6 +59,15 @@ public class ImageServlet extends HttpServlet {
             }
         } catch (SQLException e) {
             throw new ServletException("Something failed at SQL/DB level.", e);
+        } finally {
+            if (conn != null) {
+                // closes the database connection
+                try {
+                    conn.close();
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+            }
         }
     }
 }
