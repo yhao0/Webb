@@ -49,7 +49,7 @@ public class UpdateTextServlet extends HttpServlet {
             // sends the statement to the database server
             int row = statement.executeUpdate();
             if (row > 0) {
-                message = "File uploaded and saved into database";
+                message = "Title Updated";
             }
         } catch (SQLException ex) {
             message = "ERROR: " + ex.getMessage();

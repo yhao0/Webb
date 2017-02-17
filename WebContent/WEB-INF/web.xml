@@ -42,14 +42,20 @@
     <servlet-name>ImageServlet</servlet-name>
     <url-pattern>/images/HomePage/*</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>FirstPage</display-name>
-    <servlet-name>FirstPage</servlet-name>
-    <servlet-class>FirstPage</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>FirstPage</servlet-name>
-    <url-pattern>/FirstPage</url-pattern>
-  </servlet-mapping>
+  <filter>
+    <filter-name>UserFilter</filter-name>
+    <filter-class>UserFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>UserFilter</filter-name>
+    <url-pattern>/Server/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>CacheFilter</filter-name>
+    <filter-class>CacheFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>CacheFilter</filter-name>
+    <url-pattern>/Server/*</url-pattern>
+  </filter-mapping>
 </web-app>

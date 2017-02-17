@@ -8,8 +8,8 @@
 </head>
 <body>
     <div style="margin:auto">
-        <h1>File Upload to Database Demo</h1>
-        <form method="post" action="UploadImageServlet" enctype="multipart/form-data">
+        <h1>Carousel Image Upload to Database</h1>
+        <form method="post" action="../UploadImageServlet" enctype="multipart/form-data">
             <table border="0">
                 <tr>
                     <td>Image: </td>
@@ -21,8 +21,8 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                    	<input type="hidden" value="FirstPage" name="page">
-                    	<input type="hidden" value="minicarousel" name="section">
+                    	<input type="hidden" value="${param.page}" name="page">
+                    	<input type="hidden" value="carousel" name="section">
                         <input type="submit" value="Save">
                     </td>
                 </tr>

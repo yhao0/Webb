@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Login and Registration Form with HTML5 and CSS3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
+        <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
+        <meta name="author" content="Codrops" />
+		<link rel="stylesheet" type="text/css" href="server.css" />
+		<link rel="stylesheet" type="text/css" href="Animate.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>=D</h1>
+            </header>
+            <section>				
+                <div id="container_demo">
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                    	<div id="login" class="animate form">
+                            <form action="Login" method="post" autocomplete="on"> 
+                                <h1>Log in</h1> 
+                                <p> 
+                                    <label for="username" class="uname"> Your email or username </label>
+                                    <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
+                                </p>
+                                <p> 
+                                    <label for="password" class="youpasswd"> Your password </label>
+                                    <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" /> 
+                                </p>
+	                            <p class="forgotpassword"> 
+									<input type="checkbox" name="forgotpassword" id="forgotpassword" value="forgotpassword" /> 
+									<label for="forgotpassword">Forgotten your password?</label>
+								</p>
+                                <p class="login button"> 
+                                    <input type="submit" value="Login" /> 
+								</p>
+                                <p class="change_link">
+									Not a member yet ?
+									<a href="#toregister" class="to_register">Join us</a>
+								</p>
+                            </form>
+                        </div>
+
+                        <div id="register" class="animate form">
+                            <form action="RegisteringNewUsers" onsubmit="return myFunction()" method="post" autocomplete="on" name="regF"> 
+                                <h1> Sign up </h1> 
+                                <p> 
+                                    <label for="usernamesignup" class="uname">Your username</label>
+                                    <input id="usernamesignup" name="username" required="required" type="text" placeholder="mysuperusername690" onblur="checkExist()"/>
+                                    <span id="userExist"></span>
+                                </p>
+                                <p> 
+                                    <label for="emailsignup" class="youmail"> Your email</label>
+                                    <input id="emailsignup" name="email" required="required" type="email" placeholder="mysupermail@mail.com" onblur="checkEmailValidity()"/> 
+                                	<span id="emailExist"></span>
+                                </p>
+                                <p> 
+                                    <label for="passwordsignup" class="youpasswd">Your password </label>
+                                    <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO" onchange="getPassword()"/>
+                                </p>
+                                <p> 
+                                    <label for="password_confirm" class="youpasswd">Please confirm your password </label>
+                                    <input id="password_confirm" name="password_confirm" required="required" type="password" placeholder="eg. X8df!90EO" onkeyup="validatePassword()"/>
+                                    <span id="passMatch"></span>
+                                </p>
+                                <p class="signin button"> 
+									<input type="submit" value="Sign up"/> 
+								</p>
+                                <p class="change_link">  
+									Already a member ?
+									<a href="#tologin" class="to_register"> Go and log in </a>
+								</p>
+                            </form>
+                        </div>	
+                    </div>
+                </div>  
+            </section>
+        </div>
+        <script>
+        	var password;
+        	var validUsername = 0;
+        	var validPass = 0;
+			var validEmail = 0;
+        	
+      		function validatePassword(){
+      			var password = document.forms["regF"]["passwordsignup"].value;
+      			var password_confirm = document.forms["regF"]["password_confirm"].value;
+      			if(password != password_confirm) {
+        			document.getElementById("passMatch").style.color = "red";
+                    document.getElementById("passMatch").innerHTML = "Password don't match";
+        		} else {
+        			document.getElementById("passMatch").style.color = "green";
+                    document.getElementById("passMatch").innerHTML = "Password match";
+                    validPass = 1;
+        		}
+      		}
+			
+      		function checkExist(){
+                var xmlhttp = new XMLHttpRequest();
+                var username = document.forms["regF"]["username"].value;
+                var url = "UserExist.jsp?username=" + username;
+                xmlhttp.onreadystatechange = function(){
+                    if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+                        if(xmlhttp.responseText.substring(10) == "User already exists") {
+                            document.getElementById("userExist").style.color = "red";
+                            document.getElementById("userExist").innerHTML = xmlhttp.responseText;
+                        } else {
+                            document.getElementById("userExist").style.color = "green";
+                        	document.getElementById("userExist").innerHTML = xmlhttp.responseText;
+                        	validUsername = 1;
+                        }
+                    }
+                };
+                try {
+               		xmlhttp.open("GET",url,true);
+                	xmlhttp.send();
+            	} catch(e){
+            		alert("unable to connect to server");
+            	}
+            }
+      		
+			function checkEmailValidity() {
+				var xmlhttp = new XMLHttpRequest();
+                var email = document.forms["regF"]["email"].value;
+                var url = "EmailExist.jsp?email=" + email;
+                xmlhttp.onreadystatechange = function(){
+                    if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+                        if(xmlhttp.responseText.substring(10) == "Email already exists") {
+                            document.getElementById("emailExist").style.color = "red";
+                            document.getElementById("emailExist").innerHTML = xmlhttp.responseText;
+                        } else {
+                        	document.getElementById("emailExist").innerHTML = "";
+                        	validEmail = 1;
+                        }
+                    }
+                };
+                try {
+               		xmlhttp.open("GET",url,true);
+                	xmlhttp.send();
+            	} catch(e){
+            		alert("unable to connect to server");
+            	}
+			}
+      		
+			function myFunction() {
+				if (!Boolean(validUsername) || !Boolean(validPass) || !Boolean(validEmail)) {
+					event.preventDefault();
+					event.returnValue = false;
+					return false;
+				}
+			}
+        </script>
+    </body>
+</html>

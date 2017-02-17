@@ -10,7 +10,7 @@
 <body>
     <div style="margin:auto">
         <h1>Article Upload</h1>
-        <form method="post" action="UploadArticleServlet" enctype="multipart/form-data">
+        <form method="post" action="../UploadArticleServlet" enctype="multipart/form-data">
             <table border="0">
                 <tr>
                 	<td>Title: </td>

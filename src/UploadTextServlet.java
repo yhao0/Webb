@@ -26,7 +26,6 @@ public class UploadTextServlet extends HttpServlet {
             HttpServletResponse response) throws ServletException, IOException {
         // gets values of text fields
         String passage = request.getParameter("passage");
-        //System.out.println("阶梯式英语语感训练 " + " + " + passage);
         String page = request.getParameter("page");
         String section = request.getParameter("section");
          
@@ -47,7 +46,7 @@ public class UploadTextServlet extends HttpServlet {
             // sends the statement to the database server
             int row = statement.executeUpdate();
             if (row > 0) {
-                message = "File uploaded and saved into database";
+                message = "Title uploaded and saved into database";
             }
         } catch (SQLException ex) {
             message = "ERROR: " + ex.getMessage();

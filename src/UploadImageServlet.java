@@ -72,7 +72,7 @@ public class UploadImageServlet extends HttpServlet {
             // sends the statement to the database server
             int row = statement.executeUpdate();
             if (row > 0) {
-                message = "File uploaded and saved into database";
+                message = "Image uploaded and saved into database";
             }
         } catch (SQLException ex) {
             message = "ERROR: " + ex.getMessage();

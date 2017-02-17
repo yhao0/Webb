@@ -4,12 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>File Upload to Database</title>
+<title>File Upload to Database Demo</title>
 </head>
 <body>
     <div style="margin:auto">
         <h1>File Upload to Database Demo</h1>
-        <form method="post" action="UploadImageServlet" enctype="multipart/form-data">
+        <form method="post" action="../UploadImageServlet" enctype="multipart/form-data">
             <table border="0">
                 <tr>
                     <td>Image: </td>
@@ -22,7 +22,7 @@
                 <tr>
                     <td colspan="2">
                     	<input type="hidden" value="FirstPage" name="page">
-                    	<input type="hidden" value="footer" name="section">
+                    	<input type="hidden" value="minicarousel" name="section">
                         <input type="submit" value="Save">
                     </td>
                 </tr>

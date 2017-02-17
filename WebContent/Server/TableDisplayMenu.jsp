@@ -29,9 +29,9 @@ SELECT * FROM images WHERE section="menu" AND page="FirstPage";
 <tr>
    <td><c:out value="${row.id}"/></td>
    <td><c:out value="${row.file_name}"/></td>
-   <td><img src="${pageContext.request.contextPath}/images//HomePage/${row.file_name}"></td>
+   <td><img src="${pageContext.request.contextPath}/images/HomePage/${row.file_name}"></td>
    <td>
-   		<form action="DeleteServlet" method="post">
+   		<form action="../DeleteServlet" method="post">
    			<input type="hidden" value="menu" name="table"/>
    			<input type="hidden" value="${row.id}" name="picID"/>
    			<input type="submit" value="Remove" name="remove"/>
@@ -45,6 +45,8 @@ SELECT * FROM images WHERE section="menu" AND page="FirstPage";
 </tr>
 </c:forEach>
 </table>
- 
+<div style="width:100%;margin-bottom:80px">
+	<a href="UploadMenuImage.jsp" style="text-decoration:none;float:right;border:1px solid black;border-radius:5px;background-color: lightgoldenyellow;">Upload Image</a>
+</div>
 </body>
 </html>

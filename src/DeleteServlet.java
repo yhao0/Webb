@@ -62,7 +62,7 @@ public class DeleteServlet extends HttpServlet {
             request.setAttribute("Message", message);
              
             // forwards to the message page
-            getServletContext().getRequestDispatcher("/ServerMain.html").forward(request, response);
+            getServletContext().getRequestDispatcher("/Server/Server.jsp").forward(request, response);
         }	
 	}
 }

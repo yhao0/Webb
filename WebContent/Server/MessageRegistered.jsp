@@ -13,7 +13,7 @@
 			<h3><%=request.getAttribute("Message")%></h3>
 		</div>
 		<div style="margin: auto">
-			<a href="${pageContext.request.contextPath}/Server/Server.jsp">Back</a>
+			<a href="Register.html">Back</a>
 		</div>
 	</div>
 </body>
