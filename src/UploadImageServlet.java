@@ -32,8 +32,9 @@ public class UploadImageServlet extends HttpServlet {
         // gets values of text fields
         String fileName = request.getParameter("fileName");
         String page = request.getParameter("page");
-        System.out.println("page " + page);
+        //System.out.println("page " + page);
         String section = request.getParameter("section");
+        //System.out.println("section " + section);
         InputStream inputStream = null; // input stream of the upload file
          
         // obtains the upload file part in this multipart request

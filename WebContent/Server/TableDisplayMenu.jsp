@@ -45,8 +45,10 @@ SELECT * FROM images WHERE section="menu" AND page="FirstPage";
 </tr>
 </c:forEach>
 </table>
-<div style="width:100%;margin-bottom:80px">
-	<a href="UploadMenuImage.jsp" style="text-decoration:none;float:right;border:1px solid black;border-radius:5px;background-color: lightgoldenyellow;">Upload Image</a>
-</div>
+<form action="UploadImage.jsp" method="post">
+	<input type="hidden" value="FirstPage" name="page">
+	<input type="hidden" value="menu" name="section">
+	<input type="submit" value="Upload" name="upload">
+</form>
 </body>
 </html>

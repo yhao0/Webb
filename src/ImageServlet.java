@@ -39,7 +39,7 @@ public class ImageServlet extends HttpServlet {
     	//String table = request.getParameter("table");
     	//String imageName = request.getPathInfo(); 
     	String imageName = request.getPathInfo().substring(1); // Returns "foo.png".
-        //System.out.println("imageName " + imageName);
+        System.out.println("imageName " + imageName);
     	Connection conn = null;
         try {
         	DriverManager.registerDriver(new com.mysql.jdbc.Driver());

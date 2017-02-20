@@ -22,7 +22,7 @@
                 <tr>
                     <td colspan="2">
                     	<input type="hidden" value="${param.page}" name="page">
-                    	<input type="hidden" value="carousel" name="section">
+                    	<input type="hidden" value="${param.section}" name="section">
                         <input type="submit" value="Save">
                     </td>
                 </tr>
