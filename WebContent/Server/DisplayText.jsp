@@ -16,7 +16,7 @@
      user="root"  password="root"/>
  
 <sql:query dataSource="${snapshot}" var="result">
-SELECT * FROM text;
+SELECT * FROM text WHERE page="FirstPage";
 </sql:query>
  
 <table border="1" width="100%">
@@ -42,6 +42,8 @@ SELECT * FROM text;
 </tr>
 </c:forEach>
 </table>
- 
+ <div style="width:100%;margin-bottom:80px">
+	<a href="UploadText.jsp" style="text-decoration:none;float:right;border:1px solid black;border-radius:5px;background-color: lightgoldenyellow;">Upload Image</a>
+</div>
 </body>
 </html>

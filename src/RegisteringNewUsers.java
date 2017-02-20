@@ -30,13 +30,13 @@ public class RegisteringNewUsers extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String username = request.getParameter("username");
-		System.out.println("username "+ username);
+		//System.out.println("username "+ username);
 		String first_name = request.getParameter("first_name");
 		String last_name = request.getParameter("last_name");
 		String password = request.getParameter("passwordsignup");
-		System.out.println("password "+ password);
+		//System.out.println("password "+ password);
 		String email = request.getParameter("email");
-		System.out.println("email "+ email);
+		//System.out.println("email "+ email);
 		Connection conn = null;
 		String message = null;
 		

@@ -14,7 +14,7 @@
 <link href="Slick/slick/slick-theme.css" rel="stylesheet" type="text/css">
 <link href="FontAwesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="Copied.css" rel="stylesheet" type="text/css">
+<link href="Main.css" rel="stylesheet" type="text/css">
 <!-- scripts -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -44,7 +44,15 @@
 				</div>
 				<ul class="fl nav-main">
 					<li><a href="#">首页</a></li>
-					<li><a href="#">关于酷趣ABC</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropbtn">关于酷趣ABC</a>
+						<div class="dropdown-content">
+							<a href="#">Link 1</a>
+							<a href="#">Link 1</a>
+							<a href="#">Link 1</a>
+							<a href="#">Link 1</a>
+						</div>
+					</li>
 					<li><a href="#">真实场景英语理念</a></li>
 					<li><a href="#">课程体系</a></li>
 					<li><a href="#">学习中心</a></li>

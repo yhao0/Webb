@@ -48,6 +48,8 @@ SELECT * FROM articles ORDER BY date_time DESC;
 </tr>
 </c:forEach>
 </table>
- 
+ <div style="width:100%;margin-bottom:80px">
+	<a href="UploadArticles.jsp" style="text-decoration:none;float:right;border:1px solid black;border-radius:5px;background-color: lightgoldenyellow;">Upload Image</a>
+</div>
 </body>
 </html>
